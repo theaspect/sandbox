@@ -13,7 +13,6 @@ import lombok.extern.log4j.Log4j;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
-import java.util.Date;
 import java.util.HashMap;
 
 /**
@@ -38,7 +37,7 @@ public class CallCollectorDaemon extends AbstractDaemon {
     public void onEvent(HashMap<String, String> rawEvent) {
         AbstractEvent abstractEvent;
 
-        try{
+        try {
             // Parse event
             if ("CREATE".equalsIgnoreCase(getType(rawEvent))) {
                 router.addEvent(new CreateEvent(
@@ -63,7 +62,7 @@ public class CallCollectorDaemon extends AbstractDaemon {
             if (router.hasNewRecord()) {
                 saveRecord();
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             CallCollectorDaemon.log.error("Error in daemon", e);
         }
     }
@@ -107,8 +106,8 @@ public class CallCollectorDaemon extends AbstractDaemon {
         return Long.valueOf(rawEvent.get("chain"));
     }
 
-    private Date getDate(HashMap<String, String> rawEvent) {
-        return new Date(Long.valueOf(rawEvent.get("date")));
+    private Long getDate(HashMap<String, String> rawEvent) {
+        return Long.valueOf(rawEvent.get("date"));
     }
 
     private Service getService(HashMap<String, String> rawEvent) {

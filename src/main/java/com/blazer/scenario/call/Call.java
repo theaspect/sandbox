@@ -25,7 +25,7 @@ import java.util.Set;
 public class Call {
     Long id;
     Set<Long> legs = new HashSet<Long>();
-    Record record;
+    Record record = null;
     List<Record> ready = new LinkedList<Record>();
 
     public boolean hasId(Long id) {
@@ -33,20 +33,18 @@ public class Call {
     }
 
     public void addEvent(CreateEvent event) {
-        if(hasId(event.getId())){
-            if (null != record) {
-                record.setEnd(event.getDate());
-                if (null == record.getHangupType()) {
-                    record.setHangupType(HangupType.REDIRECT);
-                }
-                ready.add(record);
-
-                //Cleanup legs
-                legs.clear();
-                legs.add(event.getId());
-
-                commonProcessing (event);
+        if (null != record) {
+            record.setEnd(event.getDate());
+            if (null == record.getHangup()) {
+                record.setHangup(HangupType.REDIRECT);
             }
+            ready.add(record);
+
+            //Cleanup legs
+            legs.clear();
+            legs.add(event.getId());
+
+            commonProcessing (event);
         }else {
             legs.add(event.getId());
         }
@@ -71,6 +69,8 @@ public class Call {
             if(event.getService() == Service.USER){
                 event.setChain(event.getChain());
             }
+
+            ready.add(record);
         }
         commonProcessing(event);
     }
