@@ -1,0 +1,48 @@
+- !!com.blazer.scenario.event.CreateEvent
+    id: 541851
+    chain: 1239641
+    date: 1333291338000000
+    service: USER
+    name: user1
+
+- !!com.blazer.scenario.event.CreateEvent
+    id: 541852
+    chain: 1239641
+    date: 1333291421000000
+    service: USER
+    name: terminal2
+
+- !!com.blazer.scenario.event.BridgeEvent
+    id: 541852
+    chain: 1239641
+    date: 1333291427000000
+    service: !!com.blazer.scenario.domain.Service USER
+    name: terminal2
+    legB: null
+
+- !!com.blazer.scenario.event.DestroyEvent
+    id: 541851
+    chain: 1239641
+    date: 1333291427000000
+    service: USER
+    name: terminal2
+    hangup: !!com.blazer.scenario.domain.HangupType NORMAL
+
+- !!com.blazer.scenario.event.DestroyEvent
+    id: 541852
+    chain: 1239641
+    date: 1333291427000000
+    service: USER
+    name: terminal2
+    hangup: !!com.blazer.scenario.domain.HangupType NORMAL
+
+- !!com.blazer.scenario.domain.Record
+    id: 541852
+    chain: 1239641
+    begin: 1333291338000000
+    end: 1333291427000000
+    user: !!com.blazer.scenario.domain.User
+        id: 2
+    number: terminal2
+    legB: 541852
+    hangup: !!com.blazer.scenario.domain.HangupType NORMAL

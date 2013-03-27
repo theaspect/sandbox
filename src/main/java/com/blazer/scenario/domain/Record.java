@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
-import java.util.Date;
 
 /**
  * @author Constantine Linnick <theaspect@gmail.com>
@@ -17,12 +16,12 @@ public class Record {
 
     private Long chain;
 
-    private Date begin;
-    private Date end;
+    private Long begin;
+    private Long end;
 
     private User user;
     private String number;
 
     private Long legB;
-    private HangupType hangupType;
+    private HangupType hangup;
 }

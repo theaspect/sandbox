@@ -5,8 +5,6 @@ import com.blazer.scenario.domain.Service;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
-
 /**
  * @author Constantine Linnick <theaspect@gmail.com>
  */
@@ -15,7 +13,11 @@ import java.util.Date;
 public class DestroyEvent extends AbstractEvent {
     protected HangupType hangup;
 
-    public DestroyEvent(Long id, Long chain, Date date, Service service, String name, HangupType hangup) {
+    public DestroyEvent() {
+        // For debug purposes
+    }
+
+    public DestroyEvent(Long id, Long chain, Long date, Service service, String name, HangupType hangup) {
         fillAbstract(id, chain, date, service, name);
         this.hangup = hangup;
     }

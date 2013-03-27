@@ -21,7 +21,7 @@ public class CallRouter {
 
     public void addEvent(CreateEvent event) {
         // Ignore events for ConferenceRouter
-        if(event.getService() == Service.CONFERENCE){
+        if (event.getService() == Service.CONFERENCE) {
             return;
         }
 
@@ -29,6 +29,8 @@ public class CallRouter {
         Call call = new Call();
         calls.add(call);
         call.addEvent(event);
+
+        testCallReady(call);
     }
 
     public void addEvent(BridgeEvent event) {
@@ -40,16 +42,18 @@ public class CallRouter {
 
         // Merge with other leg if exists
         Call callB = findCallById(event.getLegB());
-        if(callB == null){
+        if (callB == null) {
             call.addEvent(event);
-        }else{
+        } else {
             call.mergeCalls(event, callB);
         }
+
+        testCallReady(call);
     }
 
     public void addEvent(DestroyEvent event) {
         // We dont care about conference events
-        if(event.getService() == Service.CONFERENCE){
+        if (event.getService() == Service.CONFERENCE) {
             ready.remove(findCallById(event.getId()));
         }
 
@@ -110,12 +114,16 @@ public class CallRouter {
     public Record pullRecord(UserDao userDao) {
         Record record = ready.pollFirst();
 
+        if (ready == null) {
+            throw new IllegalStateException("Record not ready");
+        }
+
         User user = userDao.findUserByName(record.getNumber());
-        if(user == null){
+        if (user == null) {
             user = userDao.findUserByTerminal(record.getNumber());
         }
 
-        if(user != null){
+        if (user != null) {
             record.setUser(user);
         }
 
