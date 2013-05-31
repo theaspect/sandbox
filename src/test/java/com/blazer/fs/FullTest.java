@@ -1,4 +1,4 @@
-package com.java.fs;
+package com.blazer.fs;
 
 import com.blazer.fs.Application;
 import com.blazer.fs.FileService;
