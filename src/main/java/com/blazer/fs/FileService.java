@@ -23,7 +23,7 @@ public class FileService {
      */
     public void delete(File file) {
         if (!file.delete()) {
-            log.debug("Cannot delete " + file.getPath());
+            FileService.log.debug("Cannot delete " + file.getPath());
         }
     }
 
