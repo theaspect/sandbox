@@ -1,6 +1,6 @@
 package com.blazer.fs;
 
-import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.*;
 import java.util.Arrays;
@@ -9,7 +9,7 @@ import java.util.Collection;
 /**
  * @author Constantine Linnick <theaspect@gmail.com>
  */
-@Log4j
+@Slf4j
 public class FileService {
     /**
      * Get files in path

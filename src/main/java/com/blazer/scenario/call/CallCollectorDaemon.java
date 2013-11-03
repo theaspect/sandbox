@@ -8,7 +8,7 @@ import com.blazer.scenario.event.AbstractEvent;
 import com.blazer.scenario.event.BridgeEvent;
 import com.blazer.scenario.event.CreateEvent;
 import com.blazer.scenario.event.DestroyEvent;
-import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -22,7 +22,7 @@ import java.util.HashMap;
  *
  * @author Constantine Linnick <theaspect@gmail.com>
  */
-@Log4j
+@Slf4j
 public class CallCollectorDaemon extends AbstractDaemon {
     private CallRouter router;
     private EntityManagerFactory emf;

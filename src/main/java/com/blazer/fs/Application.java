@@ -47,7 +47,7 @@ public class Application {
                 .filter(new NamePredicate(mask))
                 .filter(new ContentPredicate(fileService, prefix))
                 .limit(count)
-                .toImmutableList();
+                .toList();
     }
 
 
