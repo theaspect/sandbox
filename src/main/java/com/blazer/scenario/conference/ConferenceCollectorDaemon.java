@@ -2,7 +2,7 @@ package com.blazer.scenario.conference;
 
 import com.blazer.scenario.AbstractDaemon;
 import com.blazer.scenario.event.AbstractEvent;
-import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.EntityManagerFactory;
 import java.util.HashMap;
@@ -14,7 +14,7 @@ import java.util.HashMap;
  *
  * @author Constantine Linnick <theaspect@gmail.com>
  */
-@Log4j
+@Slf4j
 public class ConferenceCollectorDaemon extends AbstractDaemon {
     private ConferenceRouter router;
     private EntityManagerFactory emf;

@@ -7,14 +7,14 @@ import com.blazer.scenario.domain.dao.UserDao;
 import com.blazer.scenario.event.BridgeEvent;
 import com.blazer.scenario.event.CreateEvent;
 import com.blazer.scenario.event.DestroyEvent;
-import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.LinkedList;
 
 /**
  * @author Constantine Linnick <theaspect@gmail.com>
  */
-@Log4j
+@Slf4j
 public class CallRouter {
     private LinkedList<Call> calls = new LinkedList<Call>();
     private LinkedList<Record> ready = new LinkedList<Record>();

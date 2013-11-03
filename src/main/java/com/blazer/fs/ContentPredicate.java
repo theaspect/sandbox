@@ -1,7 +1,7 @@
 package com.blazer.fs;
 
 import com.google.common.base.Predicate;
-import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.annotation.Nullable;
 import java.io.BufferedReader;
@@ -11,7 +11,7 @@ import java.io.IOException;
 /**
  * @author Constantine Linnick <theaspect@gmail.com>
  */
-@Log4j
+@Slf4j
 public class ContentPredicate implements Predicate<File> {
     private FileService fileService;
     private String prefix;

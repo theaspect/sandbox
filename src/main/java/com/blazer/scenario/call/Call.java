@@ -9,7 +9,7 @@ import com.blazer.scenario.event.CreateEvent;
 import com.blazer.scenario.event.DestroyEvent;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -21,7 +21,7 @@ import java.util.Set;
  */
 @Getter
 @Setter
-@Log4j
+@Slf4j
 public class Call {
     Long id;
     Set<Long> legs = new HashSet<Long>();
