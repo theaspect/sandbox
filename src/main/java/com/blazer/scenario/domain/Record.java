@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  * @author Constantine Linnick <theaspect@gmail.com>
@@ -12,6 +14,7 @@ import javax.persistence.Entity;
 @Setter
 @Entity
 public class Record {
+    @Id
     private Long id;
 
     private Long chain;
@@ -19,6 +22,7 @@ public class Record {
     private Long begin;
     private Long end;
 
+    @ManyToOne
     private User user;
     private String number;
 
