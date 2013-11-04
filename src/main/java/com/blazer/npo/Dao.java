@@ -1,12 +1,8 @@
 package com.blazer.npo;
 
-import com.blazer.npo.domain.ChildMtM;
-import com.blazer.npo.domain.ChildOtM;
-import com.blazer.npo.domain.Parent;
+import com.blazer.npo.domain.*;
 import com.google.inject.Inject;
 import lombok.Getter;
-import org.hibernate.Session;
-import org.hibernate.stat.Statistics;
 
 import javax.persistence.EntityManager;
 import javax.persistence.MappedSuperclass;
@@ -18,12 +14,18 @@ import java.util.List;
 @MappedSuperclass
 @NamedQueries({
         @NamedQuery(name = "Parent.findAll", query = "from Parent"),
+        @NamedQuery(name = "ChildOtM.findAll", query = "from ChildOtM"),
+        @NamedQuery(name = "ChildMtM.findAll", query = "from ChildMtM"),
+        @NamedQuery(name = "ChildOtO.findAll", query = "from ChildOtO"),
+        @NamedQuery(name = "ChildOtMNested.findAll", query = "from ChildOtMNested"),
+
         @NamedQuery(name = "Parent.joinMtM", query = "Select p from Parent p LEFT JOIN FETCH p.childMtM c"),
         @NamedQuery(name = "Parent.joinOtM", query = "Select p from Parent p LEFT JOIN p.childOtM c"),
         @NamedQuery(name = "Parent.joinOtMFetch", query = "Select p from Parent p LEFT JOIN FETCH p.childOtM c"),
+        @NamedQuery(name = "Parent.joinOtMtO", query = "Select p from Parent p LEFT JOIN FETCH p.childOtM c JOIN FETCH c.nested n"),
+
         @NamedQuery(name = "ChildOtM.joinOtO", query = "Select c from ChildOtM c JOIN FETCH c.nested n"),
         @NamedQuery(name = "ChildMtM.joinOtMNested", query = "Select c from ChildMtM c LEFT JOIN FETCH c.nested n"),
-        @NamedQuery(name = "Parent.joinOtMtO", query = "Select p from Parent p LEFT JOIN FETCH p.childOtM c JOIN FETCH c.nested n"),
 })
 public class Dao {
     @Getter EntityManager entityManager;
@@ -35,6 +37,22 @@ public class Dao {
 
     public List<Parent> parentsFindAll() {
         return entityManager.createNamedQuery("Parent.findAll", Parent.class).getResultList();
+    }
+
+    public List<ChildOtM> childOtMFindAll() {
+        return entityManager.createNamedQuery("ChildOtM.findAll", ChildOtM.class).getResultList();
+    }
+
+    public List<ChildMtM> childMtMFindAll() {
+        return entityManager.createNamedQuery("ChildMtM.findAll", ChildMtM.class).getResultList();
+    }
+
+    public List<ChildOtO> childOtOFindAll() {
+        return entityManager.createNamedQuery("ChildOtO.findAll", ChildOtO.class).getResultList();
+    }
+
+    public List<ChildOtMNested> childOtMNestedFindAll() {
+        return entityManager.createNamedQuery("ChildOtMNested.findAll", ChildOtMNested.class).getResultList();
     }
 
     public List<Parent> parentsJoinMtM() {
@@ -59,9 +77,5 @@ public class Dao {
 
     public List<Parent> parentsOtMJoinOtMtO() {
         return entityManager.createNamedQuery("Parent.joinOtMtO", Parent.class).getResultList();
-    }
-
-    public Statistics getStatistics() {
-        return ((Session) entityManager.getDelegate()).getSessionFactory().getStatistics();
     }
 }
