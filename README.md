@@ -7,7 +7,8 @@
  * `com.blazer.scenario` [Hardcore testing](http://blog.blzr.me/2013/03/blog-post_27.html)
  * `com.blazer.fs` [File system testing](http://blog.blzr.me/2013/05/blog-post_31.html)
  * `com.blazer.npo` [Solving N+1 problem in Hibernate](http://blog.blzr.me/2013/11/n1-hibernate.html)
- * `com.blazer.mq` RMI over ActiveMQ
+ * `com.blazer.mq` [API over ActiveMQ](http://blog.blzr.me/2013/11/api-over-activemq.html)
+ * `com.blazer.paging` [Paging optimization](http://blog.blzr.me/2013/12/blog-post_8.html)
 
 ## Branches:
 
