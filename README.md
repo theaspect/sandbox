@@ -9,6 +9,7 @@
  * `com.blazer.npo` [Solving N+1 problem in Hibernate](http://blog.blzr.me/2013/11/n1-hibernate.html)
  * `com.blazer.mq` [API over ActiveMQ](http://blog.blzr.me/2013/11/api-over-activemq.html)
  * `com.blazer.paging` [Paging optimization](http://blog.blzr.me/2013/12/blog-post_8.html)
+ * `com.blazer.paging` [REPL in Java Web Application](http://blog.blzr.me/2013/12/repl-java-web-application.html)
 
 ## Branches:
 

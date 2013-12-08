@@ -1,14 +1,17 @@
 package com.blazer.repl.domain;
 
 import lombok.Getter;
+import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.LinkedList;
 import java.util.List;
 
 /** @author Constantine Linnick <theaspect@gmail.com> */
 @Entity
-@Table(name = "contact_info")
+@Table(name = "contact")
 @Getter
+@ToString(of = {"firstName", "lastName", "info"})
 public class Contact {
     @GeneratedValue
     @Id
@@ -17,8 +20,18 @@ public class Contact {
     @Column(name = "first_name")
     String firstName;
 
-    @Column(name = "first_name")
+    @Column(name = "last_name")
     String lastName;
 
-    List<String> numbers;
+    @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    List<ContactInfo> info = new LinkedList<>();
+
+    public Contact() {
+        // Default constructor
+    }
+
+    public Contact(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 }

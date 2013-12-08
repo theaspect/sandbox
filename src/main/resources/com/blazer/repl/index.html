@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>REPL demo</title>
+    <script src="jquery-2.0.3.min.js"></script>
+</head>
+<body>
+    <div>
+        <h1>Contacts</h1>
+        <ul id="contacts">
+        </ul>
+        <button id="refresh" title="Refresh">Refresh</button>
+    </div>
+    <div>
+        <h1>REPL</h1>
+<textarea id="script" cols="80" rows="20">
+import com.blazer.repl.domain.*;
+import javax.persistence.*;
+import java.util.*;
+
+// Log to server
+log.debug("Log works: {}", "WOW!")
+// Log to output
+
+// Run select
+EntityManager entityManager = emp.get();
+TypedQuery&lt;Contact> query = entityManager.createQuery("SELECT c from Contact c", Contact.class);
+List&lt;Contact> resultList = query.getResultList();
+entityManager.close();
+println resultList;
+
+// Run insert
+entityManager = emp.get();
+Contact contact = new Contact("Test", "Test");
+contact.getInfo().add(
+new ContactInfo(contact, ContactInfo.InfoType.MOBILE, "123456"));
+EntityTransaction tx = entityManager.getTransaction();
+try {
+    tx.begin();
+    entityManager.persist(contact);
+    tx.commit();
+} catch (Exception e) {
+    tx.rollback();
+} finally {
+    if (entityManager.isOpen()) {
+        entityManager.close();
+    }
+}
+</textarea><br/>
+        <button id="eval" title="Eval">Eval</button>
+        <pre id="result"></pre>
+    </div>
+    <script>
+        $(function(){
+            $("#refresh").click(function(){
+                $.get("/rest/",function(data){
+                    $("#contacts")
+                        .empty()
+                        .append($.map(
+                            data,function(e,i){
+                                return $("<li>")
+                                    .html(e.firstName + " " + e.lastName)
+                                    .append($("<ul>")
+                                        .append($.map(e.info,function(e,i){return $("<li>").html(e.infoType + " " + e.value);})));
+                            }));
+                })});
+            $("#eval").click(function(){
+                $.post("/repl/", {"code":$("#script").val()},
+                    function(data){
+                        $("#result").text(JSON.stringify(data,null,4).replace(/\\n/g,'\n'));
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
