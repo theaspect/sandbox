@@ -10,6 +10,7 @@
  * `com.blazer.mq` [API over ActiveMQ](http://blog.blzr.me/2013/11/api-over-activemq.html)
  * `com.blazer.paging` [Paging optimization](http://blog.blzr.me/2013/12/blog-post_8.html)
  * `com.blazer.paging` [REPL in Java Web Application](http://blog.blzr.me/2013/12/repl-java-web-application.html)
+ * `com.blazer.lambda` [About lambda and API](http://blog.blzr.me/2014/03/api.html)
 
 ## Branches:
 
