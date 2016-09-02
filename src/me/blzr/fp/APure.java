@@ -17,6 +17,7 @@ public class APure {
         //assertTrue(1 == idempotent());
 
         //assertTrue(7 == monthBefore());
+        // referential transparency
     }
 
     //<editor-fold desc="Example">
