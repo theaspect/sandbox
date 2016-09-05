@@ -15,3 +15,22 @@
 ## Branches:
 
  * `flyway` [FlywayDB hotfixes](http://flywaydb.org/documentation/faq.html#hot-fixes)
+
+#Функциональное программирование
+##(для простых смертных)
+
+Доклад для [sborkacamp](https://vk.com/sborkacamp)
+Сравение императивного и функционального подхода
+1. `APure` – Чистые функции
+2. `BLambda` – Демонстрация лямбд
+3. `CBasics` – Основные функции
+4. `DDelayed` – Ленивые вычисления
+5. `EAop` – Аспектно-Ориентированное программирование
+6. `EMemoize` – Мемоизация в Groovy
+7. `FInfinite` – Бесконечные генераторы
+8. `GAsync` – Асинхронные вычисления
+9. `HChaining` – Демонстрация Optional
+10. `IFileRead` – Обработка файла
+11. `JParallel`– Параллельная обработка
+12. `YMonad` – Демонстрация монад
+13. `ZCommon` – Полезные функции для демки
