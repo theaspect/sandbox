@@ -1,14 +1,21 @@
 package me.blzr.fp;
 
-public class IFileRead {
-    public static void main(String[] args) {
-        String f = "file.txt";
-        // Найти строки длиннее 2 символов и преобразовать в верхний регистр
-    }
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
 
-    //<editor-fold desc="FilesLinesPath">
-    /*
-    public static void main1(String[] args) {
+import static me.blzr.fp.ZCommon.print;
+
+public class IFileRead {
+
+    public static void main(String[] args) {
+        // Обработка файла в императивном подходе
         String f = "file.txt";
         BufferedReader br = null;
         List<String> results = new ArrayList<>();
@@ -35,11 +42,10 @@ public class IFileRead {
         }
 
         print(results);
-    }
 
-    public static void main2(String[] args) {
-        String f = "file.txt";
-        try (Stream<String> lines = Files.lines(Paths.get(f))) {
+        // Обработка файла в функциональном подходе
+        String f2 = "file.txt";
+        try (Stream<String> lines = Files.lines(Paths.get(f2))) {
             lines
                     .filter(l -> l.length() > 2)
                     .map(String::toUpperCase)
@@ -48,6 +54,5 @@ public class IFileRead {
             e.printStackTrace();
         }
     }
-    */
-    //</editor-fold>
+
 }
