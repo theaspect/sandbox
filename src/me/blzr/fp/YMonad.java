@@ -9,6 +9,8 @@ import static me.blzr.fp.ZCommon.sleep;
 
 public class YMonad {
     public static void main(String[] args) {
+        // Демонстрация трех сущностей содержащие два метода обязательных для монад: unit и bind
+
         // The unary return operation takes a value from a plain type and
         // puts it into a container using the constructor,
         // creating a monadic value: M a.
