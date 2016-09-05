@@ -10,6 +10,7 @@ int fib(int cnt) {
     }
 }
 
+// Данная аннотация позволяет кешировать результаты вызова функции
 @Memoized
 int fib2(int cnt) {
     if (cnt <= 1) {
@@ -19,10 +20,12 @@ int fib2(int cnt) {
     }
 }
 
+// Исходная неоптимальная версия
 def t1 = System.currentTimeMillis()
 fib(40)
 println System.currentTimeMillis() - t1
 
+// Мемоизованная
 def t2 = System.currentTimeMillis()
 fib2(40)
 println System.currentTimeMillis() - t2
