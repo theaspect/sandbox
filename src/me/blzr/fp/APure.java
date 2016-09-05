@@ -5,9 +5,12 @@ import java.time.Period;
 import java.time.temporal.ChronoField;
 
 import static me.blzr.fp.ZCommon.assertTrue;
+import static me.blzr.fp.ZCommon.print;
 
 public class APure {
     public static void main(String[] args) {
+        print("Чистые функции");
+
         // У данной функции сайд-эффекты, которые изменяют внешнюю переменную
         assertTrue(1 == nonIdempotent()); // OK
         assertTrue(1 == nonIdempotent()); // FAIL
