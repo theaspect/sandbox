@@ -48,7 +48,7 @@ public class QueueServer implements Server {
         try {
             response.send(jmsReplyTo, session.createObjectMessage(message));
         } catch (JMSException e) {
-            log.error("Cannot send response {}", e);
+            log.error("Cannot send response", e);
         }
     }
 
@@ -64,7 +64,7 @@ public class QueueServer implements Server {
         }
     }
 
-    public Object invoke(Request invocation) throws Exception {
+    private Object invoke(Request invocation) throws Exception {
         @SuppressWarnings("unchecked")
         Class<? extends AbstractService> clazz = (Class<? extends AbstractService>)
                 Class.forName(AbstractService.PREFIX + invocation.getService());
@@ -79,7 +79,7 @@ public class QueueServer implements Server {
 
         if (method != null) {
             try {
-                return method.invoke(clazz.newInstance(), invocation.getArgs());
+                return method.invoke(clazz.getDeclaredConstructor().newInstance(), (Object[]) invocation.getArgs());
             } catch (InvocationTargetException e) {
                 if (e.getTargetException() instanceof Exception) {
                     throw (Exception) e.getTargetException();

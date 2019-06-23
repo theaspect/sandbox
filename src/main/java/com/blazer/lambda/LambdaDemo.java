@@ -67,7 +67,7 @@ public class LambdaDemo {
     private void aopDemo() {
         log.debug("*** aopDemo");
         FooClass foo = new FooClass("Hello world");
-        log.debug("Result is {}", wrap(foo,
+        log.debug("Result is {}", this.<FooClass, Object>wrap(foo,
                 (closure) -> log.debug("Before {}", closure.getField()),
                 (closure) -> {
                     closure.setField("it works");
