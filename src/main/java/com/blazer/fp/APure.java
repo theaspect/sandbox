@@ -1,11 +1,11 @@
-package me.blzr.fp;
+package com.blazer.fp;
 
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.temporal.ChronoField;
 
-import static me.blzr.fp.ZCommon.assertTrue;
-import static me.blzr.fp.ZCommon.print;
+import static com.blazer.fp.ZCommon.assertTrue;
+import static com.blazer.fp.ZCommon.print;
 
 public class APure {
     public static void main(String[] args) {

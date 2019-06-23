@@ -1,9 +1,9 @@
-package me.blzr.fp;
+package com.blazer.fp;
 
 import java.util.HashMap;
 import java.util.function.Function;
 
-import static me.blzr.fp.ZCommon.print;
+import static com.blazer.fp.ZCommon.print;
 
 public class EAop {
     public static void main(String[] args) {

@@ -1,11 +1,11 @@
-package me.blzr.fp;
+package com.blazer.fp;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static me.blzr.fp.ZCommon.print;
+import static com.blazer.fp.ZCommon.print;
 
 public class CBasics {
     public static void main(String[] args) {

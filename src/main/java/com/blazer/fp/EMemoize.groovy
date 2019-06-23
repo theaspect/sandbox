@@ -1,4 +1,4 @@
-package me.blzr.fp
+package com.blazer.fp
 
 import groovy.transform.Memoized
 

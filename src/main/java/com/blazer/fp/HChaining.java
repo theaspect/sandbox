@@ -1,8 +1,8 @@
-package me.blzr.fp;
+package com.blazer.fp;
 
 import java.util.Optional;
 
-import static me.blzr.fp.ZCommon.print;
+import static com.blazer.fp.ZCommon.print;
 
 public class HChaining {
     public static void main(String[] args) {

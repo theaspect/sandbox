@@ -1,11 +1,11 @@
-package me.blzr.fp;
+package com.blazer.fp;
 
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
-import static me.blzr.fp.ZCommon.print;
-import static me.blzr.fp.ZCommon.sleep;
+import static com.blazer.fp.ZCommon.print;
+import static com.blazer.fp.ZCommon.sleep;
 
 public class YMonad {
     public static void main(String[] args) {

@@ -1,10 +1,10 @@
-package me.blzr.fp;
+package com.blazer.fp;
 
 import java.util.Random;
 
-import static me.blzr.fp.ZCommon.print;
-import static me.blzr.fp.ZCommon.sleep;
-import static me.blzr.fp.ZCommon.Function;
+import static com.blazer.fp.ZCommon.print;
+import static com.blazer.fp.ZCommon.sleep;
+import static com.blazer.fp.ZCommon.Function;
 
 public class DDelayed {
 

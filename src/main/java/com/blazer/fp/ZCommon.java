@@ -1,4 +1,4 @@
-package me.blzr.fp;
+package com.blazer.fp;
 
 public class ZCommon {
     static void sleep(int delay) {

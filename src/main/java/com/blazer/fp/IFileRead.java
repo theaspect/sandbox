@@ -1,4 +1,4 @@
-package me.blzr.fp;
+package com.blazer.fp;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static me.blzr.fp.ZCommon.print;
+import static com.blazer.fp.ZCommon.print;
 
 public class IFileRead {
 

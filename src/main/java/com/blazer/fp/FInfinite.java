@@ -1,4 +1,4 @@
-package me.blzr.fp;
+package com.blazer.fp;
 
 import java.util.Random;
 import java.util.function.Supplier;
@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import static me.blzr.fp.ZCommon.print;
+import static com.blazer.fp.ZCommon.print;
 
 public class FInfinite {
     public static void main(String[] args) {

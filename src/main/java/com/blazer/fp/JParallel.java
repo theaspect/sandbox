@@ -1,11 +1,11 @@
-package me.blzr.fp;
+package com.blazer.fp;
 
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.stream.Collectors;
 
-import static me.blzr.fp.ZCommon.print;
-import static me.blzr.fp.ZCommon.sleep;
+import static com.blazer.fp.ZCommon.print;
+import static com.blazer.fp.ZCommon.sleep;
 
 public class JParallel {
     public static void main(String[] args) {
