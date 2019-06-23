@@ -1,6 +1,7 @@
 package com.blazer.pattern
 
 import com.blazer.pattern.behavioral.Caretaker
+import com.blazer.pattern.behavioral.ObserverDemo
 import com.blazer.pattern.behavioral.Sender
 import com.blazer.pattern.structural.Singleton
 
@@ -19,6 +20,9 @@ private fun behavioral() {
 
     h2("Memento")
     Caretaker.method()
+
+    h2("Observer")
+    ObserverDemo.method()
 }
 
 fun creational() {
