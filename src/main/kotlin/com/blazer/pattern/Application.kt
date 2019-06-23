@@ -1,6 +1,7 @@
 package com.blazer.pattern
 
 import com.blazer.pattern.behavioral.Caretaker
+import com.blazer.pattern.behavioral.Sender
 import com.blazer.pattern.structural.Singleton
 
 fun main() {
@@ -11,23 +12,29 @@ fun main() {
 }
 
 private fun behavioral() {
-    println("Behavioral Patterns")
+    h1("Behavioral Patterns")
 
-    println("Memento")
+    h2("Chain of Responsibility")
+    Sender.method()
+
+    h2("Memento")
     Caretaker.method()
 }
 
 fun creational() {
-    println("Creational Patterns")
+    h1("Creational Patterns")
 }
 
 fun concurrency() {
-    println("Concurrency Patterns")
+    h1("Concurrency Patterns")
 }
 
 private fun structural() {
-    println("Structural Patterns")
+    h1("Structural Patterns")
 
-    println("Singleton")
+    h2("Singleton")
     repeat(10) { println(Singleton.method()) }
 }
+
+private fun h1(message: String) = println("\n=$message=")
+private fun h2(message: String) = println("\n==$message==")
