@@ -1,6 +1,7 @@
 package com.blazer.pattern
 
 import com.blazer.pattern.behavioral.Caretaker
+import com.blazer.pattern.behavioral.CommandDemo
 import com.blazer.pattern.behavioral.ObserverDemo
 import com.blazer.pattern.behavioral.Sender
 import com.blazer.pattern.structural.Singleton
@@ -17,6 +18,9 @@ private fun behavioral() {
 
     h2("Chain of Responsibility")
     Sender.method()
+
+    h2("Command")
+    CommandDemo.method()
 
     h2("Memento")
     Caretaker.method()
