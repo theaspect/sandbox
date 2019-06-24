@@ -36,6 +36,9 @@ private fun behavioral() {
 
     h2("Strategy")
     strategyDemo()
+
+    h2("Template Method")
+    templateMethodDemo()
 }
 
 fun creational() {
