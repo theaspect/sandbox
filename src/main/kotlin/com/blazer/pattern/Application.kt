@@ -30,6 +30,9 @@ private fun behavioral() {
 
     h2("State")
     stateDemo()
+
+    h2("Strategy")
+    strategyDemo()
 }
 
 fun creational() {
