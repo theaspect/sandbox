@@ -22,6 +22,9 @@ private fun behavioral() {
     h2("Interpreter")
     interpreterDemo()
 
+    h2("Iterator")
+    demoIterator()
+
     h2("Memento")
     Caretaker.method()
 
