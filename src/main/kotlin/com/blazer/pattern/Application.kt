@@ -1,6 +1,7 @@
 package com.blazer.pattern
 
 import com.blazer.pattern.behavioral.*
+import com.blazer.pattern.creational.demoPrototype
 import com.blazer.pattern.structural.Singleton
 
 fun main() {
@@ -43,6 +44,9 @@ private fun behavioral() {
 
 fun creational() {
     h1("Creational Patterns")
+
+    h2("Prototype")
+    demoPrototype()
 }
 
 fun concurrency() {
