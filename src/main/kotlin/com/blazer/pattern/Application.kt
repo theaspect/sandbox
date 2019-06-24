@@ -19,6 +19,9 @@ private fun behavioral() {
     h2("Command")
     CommandDemo.method()
 
+    h2("Interpreter")
+    interpreterDemo()
+
     h2("Memento")
     Caretaker.method()
 
