@@ -1,9 +1,6 @@
 package com.blazer.pattern
 
-import com.blazer.pattern.behavioral.Caretaker
-import com.blazer.pattern.behavioral.CommandDemo
-import com.blazer.pattern.behavioral.ObserverDemo
-import com.blazer.pattern.behavioral.Sender
+import com.blazer.pattern.behavioral.*
 import com.blazer.pattern.structural.Singleton
 
 fun main() {
@@ -27,6 +24,9 @@ private fun behavioral() {
 
     h2("Observer")
     ObserverDemo.method()
+
+    h2("State")
+    stateDemo()
 }
 
 fun creational() {
