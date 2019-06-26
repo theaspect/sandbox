@@ -2,10 +2,7 @@ package com.blazer.pattern
 
 import com.blazer.pattern.behavioral.*
 import com.blazer.pattern.creational.demoPrototype
-import com.blazer.pattern.structural.Singleton
-import com.blazer.pattern.structural.adapterDemo
-import com.blazer.pattern.structural.decoratorDemo
-import com.blazer.pattern.structural.facadeDemo
+import com.blazer.pattern.structural.*
 
 fun main() {
     behavioral()
@@ -56,6 +53,9 @@ fun creational() {
 
     h2("Adapter")
     adapterDemo()
+
+    h2("Bridge")
+    bridgeDemo()
 
     h2("Decorator")
     decoratorDemo()
