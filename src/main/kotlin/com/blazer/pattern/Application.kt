@@ -66,6 +66,9 @@ fun creational() {
     h2("Facade")
     facadeDemo()
 
+    h2("Flyweight")
+    flyweightDemo()
+
     h2("Prototype")
     demoPrototype()
 
