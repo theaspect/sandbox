@@ -57,6 +57,9 @@ fun creational() {
     h2("Bridge")
     bridgeDemo()
 
+    h2("Composite")
+    demoComposite()
+
     h2("Decorator")
     decoratorDemo()
 
