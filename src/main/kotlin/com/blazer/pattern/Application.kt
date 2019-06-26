@@ -56,6 +56,9 @@ fun creational() {
     h2("Adapter")
     adapterDemo()
 
+    h2("Decorator")
+    decoratorDemo()
+
     h2("Prototype")
     demoPrototype()
 }
