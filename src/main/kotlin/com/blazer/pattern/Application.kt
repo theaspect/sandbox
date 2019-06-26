@@ -26,6 +26,9 @@ private fun behavioral() {
     h2("Iterator")
     demoIterator()
 
+    h2("Mediator")
+    mediatorDemo()
+
     h2("Memento")
     Caretaker.method()
 
