@@ -5,6 +5,7 @@ import com.blazer.pattern.creational.demoPrototype
 import com.blazer.pattern.structural.Singleton
 import com.blazer.pattern.structural.adapterDemo
 import com.blazer.pattern.structural.decoratorDemo
+import com.blazer.pattern.structural.facadeDemo
 
 fun main() {
     behavioral()
@@ -58,6 +59,9 @@ fun creational() {
 
     h2("Decorator")
     decoratorDemo()
+
+    h2("Facade")
+    facadeDemo()
 
     h2("Prototype")
     demoPrototype()
