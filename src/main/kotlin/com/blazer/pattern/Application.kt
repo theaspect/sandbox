@@ -3,6 +3,8 @@ package com.blazer.pattern
 import com.blazer.pattern.behavioral.*
 import com.blazer.pattern.creational.demoPrototype
 import com.blazer.pattern.structural.Singleton
+import com.blazer.pattern.structural.adapterDemo
+import com.blazer.pattern.structural.decoratorDemo
 
 fun main() {
     behavioral()
@@ -50,6 +52,9 @@ private fun behavioral() {
 
 fun creational() {
     h1("Creational Patterns")
+
+    h2("Adapter")
+    adapterDemo()
 
     h2("Prototype")
     demoPrototype()
