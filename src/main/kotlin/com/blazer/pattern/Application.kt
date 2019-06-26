@@ -68,6 +68,9 @@ fun creational() {
 
     h2("Prototype")
     demoPrototype()
+
+    h2("Proxy")
+    demoProxy()
 }
 
 fun concurrency() {
