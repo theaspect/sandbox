@@ -43,6 +43,9 @@ private fun behavioral() {
 
     h2("Template Method")
     templateMethodDemo()
+
+    h2("Visitor")
+    visitorDemo()
 }
 
 fun creational() {
