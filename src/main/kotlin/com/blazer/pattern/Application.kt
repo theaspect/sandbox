@@ -1,6 +1,8 @@
 package com.blazer.pattern
 
 import com.blazer.pattern.behavioral.*
+import com.blazer.pattern.creational.Singleton
+import com.blazer.pattern.creational.demoAbstractFactory
 import com.blazer.pattern.creational.demoPrototype
 import com.blazer.pattern.structural.*
 
@@ -48,8 +50,25 @@ private fun behavioral() {
     visitorDemo()
 }
 
-fun creational() {
+fun concurrency() {
+    h1("Concurrency Patterns")
+}
+
+private fun creational() {
     h1("Creational Patterns")
+
+    h2("Abstract Factory")
+    demoAbstractFactory()
+
+    h2("Prototype")
+    demoPrototype()
+
+    h2("Singleton")
+    repeat(10) { println(Singleton.method()) }
+}
+
+fun structural() {
+    h1("Structural Patterns")
 
     h2("Adapter")
     adapterDemo()
@@ -69,22 +88,8 @@ fun creational() {
     h2("Flyweight")
     flyweightDemo()
 
-    h2("Prototype")
-    demoPrototype()
-
     h2("Proxy")
     demoProxy()
-}
-
-fun concurrency() {
-    h1("Concurrency Patterns")
-}
-
-private fun structural() {
-    h1("Structural Patterns")
-
-    h2("Singleton")
-    repeat(10) { println(Singleton.method()) }
 }
 
 private fun h1(message: String) = println("\n=$message=")

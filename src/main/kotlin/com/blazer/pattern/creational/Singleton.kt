@@ -1,4 +1,4 @@
-package com.blazer.pattern.structural
+package com.blazer.pattern.creational
 
 object Singleton {
     init {
