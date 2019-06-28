@@ -1,10 +1,7 @@
 package com.blazer.pattern
 
 import com.blazer.pattern.behavioral.*
-import com.blazer.pattern.creational.Singleton
-import com.blazer.pattern.creational.abstractFactoryDemo
-import com.blazer.pattern.creational.factoryMethodDemo
-import com.blazer.pattern.creational.prototypeDemo
+import com.blazer.pattern.creational.*
 import com.blazer.pattern.structural.*
 
 fun main() {
@@ -60,6 +57,9 @@ private fun creational() {
 
     h2("Abstract Factory")
     abstractFactoryDemo()
+
+    h2("Builder")
+    builderDemo()
 
     h2("Factory Method")
     factoryMethodDemo()
