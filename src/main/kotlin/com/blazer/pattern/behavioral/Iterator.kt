@@ -1,6 +1,6 @@
 package com.blazer.pattern.behavioral
 
-fun demoIterator() {
+fun iteratorDemo() {
     for (i in Range(0, 10)) {
         println(i)
     }

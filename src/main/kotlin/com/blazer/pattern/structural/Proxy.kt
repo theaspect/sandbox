@@ -1,6 +1,6 @@
 package com.blazer.pattern.structural
 
-fun demoProxy() {
+fun proxyDemo() {
     val proxy = Proxy(Actual())
 
     println(proxy.square(1))

@@ -2,8 +2,9 @@ package com.blazer.pattern
 
 import com.blazer.pattern.behavioral.*
 import com.blazer.pattern.creational.Singleton
-import com.blazer.pattern.creational.demoAbstractFactory
-import com.blazer.pattern.creational.demoPrototype
+import com.blazer.pattern.creational.abstractFactoryDemo
+import com.blazer.pattern.creational.factoryMethodDemo
+import com.blazer.pattern.creational.prototypeDemo
 import com.blazer.pattern.structural.*
 
 fun main() {
@@ -26,7 +27,7 @@ private fun behavioral() {
     interpreterDemo()
 
     h2("Iterator")
-    demoIterator()
+    iteratorDemo()
 
     h2("Mediator")
     mediatorDemo()
@@ -58,10 +59,13 @@ private fun creational() {
     h1("Creational Patterns")
 
     h2("Abstract Factory")
-    demoAbstractFactory()
+    abstractFactoryDemo()
+
+    h2("Factory Method")
+    factoryMethodDemo()
 
     h2("Prototype")
-    demoPrototype()
+    prototypeDemo()
 
     h2("Singleton")
     repeat(10) { println(Singleton.method()) }
@@ -77,7 +81,7 @@ fun structural() {
     bridgeDemo()
 
     h2("Composite")
-    demoComposite()
+    compositeDemo()
 
     h2("Decorator")
     decoratorDemo()
@@ -89,7 +93,7 @@ fun structural() {
     flyweightDemo()
 
     h2("Proxy")
-    demoProxy()
+    proxyDemo()
 }
 
 private fun h1(message: String) = println("\n=$message=")

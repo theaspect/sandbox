@@ -1,6 +1,6 @@
 package com.blazer.pattern.creational
 
-fun demoAbstractFactory() {
+fun abstractFactoryDemo() {
     val foo: Foo = FactoryA.getFoo()
     val bar: Bar = FactoryB.getBar()
 

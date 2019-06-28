@@ -1,6 +1,6 @@
 package com.blazer.pattern.creational
 
-fun demoPrototype() {
+fun prototypeDemo() {
     val prototype = Prototype(1, 2)
     println("Prototype: $prototype")
     val clone = prototype.copy(a = 5)

@@ -1,6 +1,6 @@
 package com.blazer.pattern.structural
 
-fun demoComposite() {
+fun compositeDemo() {
     val uniformity = BranchUniformity()
     uniformity.add(LeafUniformity())
     uniformity.add(BranchUniformity())
