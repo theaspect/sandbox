@@ -16,8 +16,8 @@
 
  * `flyway` [FlywayDB hotfixes](http://flywaydb.org/documentation/faq.html#hot-fixes)
 
-#Функциональное программирование
-##(для простых смертных)
+# Функциональное программирование
+## (для простых смертных)
 
 Доклад для [sborkacamp](https://vk.com/sborkacamp)
 Сравение императивного и функционального подхода
