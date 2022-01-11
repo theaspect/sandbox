@@ -15,7 +15,7 @@ targetCompatibility = 1.8
 
 ext {
     jettyVersion = "11.0.7"
-    lombokVersion = "1.18.8"
+    lombokVersion = "1.18.22"
 }
 
 repositories {
