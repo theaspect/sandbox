@@ -35,7 +35,7 @@ dependencies {
     compile group: 'com.google.guava', name: 'guava', version:'23.0'
     compile group: 'com.google.inject', name: 'guice', version:'5.1.0'
     compile group: 'com.google.inject.extensions', name: 'guice-servlet', version:'5.1.0'
-    compile group: 'org.apache.activemq', name: 'activemq-all', version:'5.16.4'
+    compile group: 'org.apache.activemq', name: 'activemq-all', version:'5.17.0'
     compile group: 'com.google.code.findbugs', name: 'jsr305', version:'3.0.2'
 
     // TODO configure version via gradle
