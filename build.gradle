@@ -23,7 +23,7 @@ dependencies {
 
     implementation group: 'com.h2database', name: 'h2', version:'2.1.214'
     implementation group: 'org.hibernate', name: 'hibernate-entitymanager', version:'5.6.14.Final'
-    implementation group: 'org.slf4j', name: 'slf4j-api', version:'1.7.36'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version:'2.0.6'
     implementation group: 'org.slf4j', name: 'slf4j-ext', version:'1.7.36'
     implementation group: 'log4j', name: 'log4j', version:'1.2.17'
     implementation group: 'org.yaml', name: 'snakeyaml', version:'1.33'
